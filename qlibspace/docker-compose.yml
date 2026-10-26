@@ -1,0 +1,11 @@
+
+services:
+  qlib:
+    image: pyqlib/qlib_image_stable:stable
+    volumes:
+      - ./:/app
+      - ../qlib_data:/root/.qlib/qlib_data
+    ports:
+      - "8888:8888"
+    stdin_open: true
+    tty: true
